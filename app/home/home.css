@@ -4,12 +4,13 @@
 }
 
 .navbar {
-    width: 261px;
+    width: 270px;
     height: auto;
 }
 
 .tab-list {
-    height: 2000px;
+    width: 270px;
+    height: auto;
     display: flex;
     flex-direction: column;
     border-right: 1px solid #bdc3c7;
@@ -264,4 +265,120 @@ small {
 
 .list-home:hover .tab-home {
     visibility: visible;
+}
+
+
+/* ket thuc home */
+
+.list-icon {
+    margin-top: 4.5rem;
+    width: 200px;
+    border-top: 1px solid #bdc3c7;
+}
+
+.text-theme {
+    margin-top: 1rem;
+    color: #b2bec3;
+    font-size: 12px;
+}
+
+.fa-twitter-square,
+.fa-flickr,
+.fa-google-plus-square,
+.fa-instagram-square,
+.fa-youtube-square {
+    font-size: 25px;
+    padding-left: 0.6rem;
+}
+
+.fa-facebook-square {
+    font-size: 25px;
+    color: blue;
+}
+
+.fa-twitter-square {
+    color: #81ecec;
+}
+
+.fa-flickr {
+    color: #fd79a8;
+}
+
+.fa-google-plus-square {
+    color: #e17055;
+}
+
+.fa-instagram-square {
+    color: #6c5ce7;
+}
+
+.fa-youtube-square {
+    color: #d63031;
+}
+
+
+/* -------------tab-2----------- */
+
+.img-1 {
+    position: relative;
+    width: 920px;
+    height: 400px;
+}
+
+.img-logo1 {
+    position: absolute;
+    margin-top: 2rem;
+    width: 920px;
+    height: 400px;
+    left: -1%;
+    z-index: 10;
+}
+
+.img-1:before {
+    content: "";
+    position: absolute;
+    width: 920px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    left: -1%;
+    margin-top: 2rem;
+}
+
+.text-tab-shop {
+    font-weight: bold;
+    position: absolute;
+    letter-spacing: 2px;
+    font-size: 40px;
+    color: white;
+    z-index: 30;
+    left: 51%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.product {
+    width: 920px;
+    position: absolute;
+    height: auto;
+    margin-top: 5rem;
+    left: 25.2%;
+}
+
+.slider {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider:hover {
+    background-color: #d63031;
+}
+
+.fa-sliders-h {
+    font-size: 30px;
+    color: #ffffff;
 }
