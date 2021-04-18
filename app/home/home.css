@@ -778,3 +778,26 @@ h5 {
     text-decoration: none;
     color: #7f8c8d;
 }
+
+.Us {
+    width: 960px;
+    border-top: 1px solid #b2bec3;
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+
+.Us a {
+    text-decoration: none;
+    color: #95a5a6;
+    border-right: 1px solid #b2bec3;
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;
+}
+
+.Contact-us {
+    border: none !important;
+}
+
+.Us a:hover {
+    color: black;
+}
