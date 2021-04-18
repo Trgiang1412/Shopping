@@ -1,62 +1,141 @@
-@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Quicksand:wght@300&display=swap");
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #f5f6fa;
-    line-height: 1.5;
-    font-family: 'Kiwi Maru', serif;
-    font-size: 13px;
+    background: rgb(219, 226, 226);
+    perspective: 1000px;
 }
 
-.task-1 {
-    margin-top: 3rem;
-    width: 20rem;
-    height: 20rem;
-    background-color: #ffffff;
-    box-shadow: 1px 1px #ced6e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 30.5rem;
+.row {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 12px 12px 22px grey;
 }
 
-.btn-login {
-    float: right;
-    font-weight: bold;
-    margin-top: 0.5rem;
+.cartRow {
+    transform-style: preserve-3d;
 }
 
 img {
-    margin-left: 38rem;
-    margin-top: 6.5rem;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    z-index: 2;
 }
 
-.link-text {
-    margin-top: 1rem;
+.sneaker {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-a {
-    text-decoration: none;
-    color: #2980b9;
+.circle {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient( to right, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75));
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
 }
 
-@media screen and (max-width: 640px) {
-    .task-1 {
-        margin-top: 3rem;
-        width: 20rem;
-        height: 20rem;
-        background-color: #ffffff;
-        box-shadow: 1px 1px #ced6e0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 1.3rem;
+.img-fluid {
+    margin-top: 3px;
+    max-width: 87% !important;
+    transition: all 0.75s ease-out;
+}
+
+.btn1 {
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background: black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+
+/* .btn1:hover {
+    background: white;
+    border: 1px solid black;
+    color: black;
+    outline: none;
+  } */
+
+.btn1.animate {
+    width: 68.1818181818px;
+    height: 68.1818181818px;
+    min-width: 0;
+    border-radius: 50%;
+    color: transparent;
+    margin: 130px;
+    outline: none;
+}
+
+.btn1.animate::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    outline: none;
+    height: 25px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    border-left-color: transparent;
+    left: 50%;
+    top: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    animation: spin ease-in 2.5s forwards;
+    animation-name: spin;
+    -webkit-animation-name: spin;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+    -webkit-animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.btn1.animate.success:before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 12.5px;
+    border: 4px solid #fff;
+    outline: none;
+    border-right: 0;
+    border-top: 0;
+    left: 50%;
+    top: 35%;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(0);
+    transform: translate(-50%, -50%) rotate(0deg) scale(0);
+    -webkit-animation: success ease-in 0.15s forwards;
+    animation: success ease-in 0.15s forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
     }
-    img {
-        margin-left: 8.6rem;
-        margin-top: 4rem;
+    90% {
+        transform: translate(-50%, -50%) rotate(1080deg) scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes success {
+    from {
+        transform: translate(-50%, -50%) rotate(0) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-45deg) scale(1);
     }
 }
